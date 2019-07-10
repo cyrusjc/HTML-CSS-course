@@ -1,0 +1,85 @@
+/*
+	COLORS: WE CAN USE NAMES, HEXADECIMAL, rgba(x,x,x,x) or rgb(x,x,x)
+*/
+
+/* ADDING BORDERS */
+/* MODIFYING VIA ELEMENT */
+/*
+h1{
+	color :red;
+	border: 1px dashed black;
+	text-decoration: underline;
+}
+
+li{
+	color: green;
+}
+h3{
+	color:red;
+}
+
+/* OR WE CAN USE AN URL */
+body{
+	/*background: url(https://image.freepik.com/free-photo/old-grunge-black-gray-background_74190-2032.jpg);*/
+	background: lightgrey;
+	background-repeat: no-repeat;/* this makes it no repeat */
+	background-size: cover;/* this makes it stretch the size of the page*/
+/* FONTS */
+	font-family: "Open Sans";
+	font-weight: 200; /* goes by 100s*/
+	line-height: 1.5; /* 1 1/2 space*/
+
+}
+
+
+img{
+	border: 5px solid black ;
+	padding: 10px;
+}
+
+
+
+/* we can use ID's AND alter things that are tagged with ID*/
+/* in this case we can do it for our list*/
+/* we can only assign 1 special to 1 element */
+#special {
+	color: orange;
+	border: 1px black solid;
+}
+/* we can also use classes to tag 1 or more things */
+
+.swag {
+	color: black;
+	background: grey;
+}
+
+/* TAGS */
+
+/*STAR - SELECTS ALL ELEMENTS */
+
+/*descendant selector all li inside an ul inside another ul */
+ul ul li {
+	color: orange;
+}
+
+/* adjacent selectors  all ol after po*/
+p + ol {
+	border: black 1px dashed;
+}
+
+/*attribute selector - selects any thing with an attribute, any anchor tag
+ any checkboxes, images, image sources*/
+
+ a[href="https://www.google.com"] {
+ 	border: 10px solid grey;
+ }
+
+input[type="text"] {
+	background: blue;
+}
+
+/*nth of type - every 5th paragraph, every 2nd dev, every 2nd p*/
+td:nth-of-type(2){
+	color: gold;
+
+}

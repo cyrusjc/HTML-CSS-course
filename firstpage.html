@@ -1,27 +1,60 @@
 <!DOCTYPE html>
 <html>
 <head>
-
-	<!-- COMMENTS ARE LIKE THIS -->
-	<!-- OR USE CTRL +  / to comment -->
-
 	<title>My First Page</title>
+
+<!--  =======THIS LINKS OUR HTML WITH OUR CSS FILE ======	 -->
+	<link rel="stylesheet" type="text/css" href="firstpage.css">
+<!-- 	======= THIS LETS US USE CUSTOM TEXT============ -->
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+
 </head>
 <body>
 
 	<h1> This is my first tag </h1>
 	<h2>  My 2nd heading</h2>
-<!-- 	BOLD is <b> or <strong> and ITALICIZE is <em> or <i>-->
-	<p>
-		is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining
-	</p>
-	<p>
-		Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure 
-	</p>
 
+<!-- THIS LINKS TO AN IMAGE FROM THE INTERWEBS AND DISPLAYS IT HERE -->
+	<p>
+		<img src="raph.jpg">
+	</p>
+<!-- To link to a website you need HTTPS -->
+	<p>
+		<a href="https://www.google.com">Click me to go to google!</a>
+	</p>
+<!-- Or you can use relative path! -->
+	<a href="page2.html" class = "swag" > OR GO TO PAGE 2</a>
+
+<!-- 	BOLD is <b> or <strong> and ITALICIZE is <em> or <i>-->
+	<p id="special">
+		Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+	</p>
+	<p>
+		Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+	</p>
+	<p>
+		Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+	</p>
+<!-- ============================================LISTS ============================ -->
 <!-- ol stands for ordered list -->
 	<ol>
 <!-- li stands for list items  -->
+<!--  WE ADD A SPECIAL TAG FOR CSS -->
 		<li>big</li>
 		<li>booty</li>
 		<li>bitches</li>
@@ -30,15 +63,108 @@
 <!-- ul stands for unordered list -->
 <!-- We can put styling in lists as well as a nested list the following  -->
 	<ul>
-		<li><strong>fat</strong></li>
+		<li><strong>phat</strong></li>
 		<li>ass
 			<ul>
 				<li>booty</li>
 				<li>butt</li>
 			</ul>
 		</li>
-		<li>hoes</li>
-	</ol>
+		<li>hoes
+			<ul>
+				<li>spade</li>
+				<li>pitchfork</li>
+			</ul>
+		</li>
+	</ul>
+<!-- ============================================END OF LISTS  ============================ -->
+<!-- ==============================================TABLE================================== -->
+<!-- THEAD AND TBODY TO DISTINGUISH FROM HEADER AND TEXT -->
+	<table>
+		<thead>
+			<tr>
+				<th>Name</th>
+				<th>Age</th>
+				<th>Breed</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>Rusty</td>
+				<td>2</td>
+				<td>Mutt</td>
+			</tr>
+
+			<tr>
+				<td>Wyatt</td>
+				<td>13</td>
+				<td>Golden</td>
+			</tr>
+		</tbody>
+	</table>
+<!-- ==============================================END OF TABLE========================== -->
+
+
+<!-- ==============================================FORMS================================== -->
+	<h1>Personal INFO</h1>
+<!-- =========================FIELDS===================== -->
+<!-- action is where the form sends data to  -->
+<!-- method what HTTP (get/post) defaulted to get request -->
+<!-- LABELS TELL THE WEBSITE WHAT THE F IT IS -->
+
+
+	<form action="http://wikipedia.com" method="GET">
+		<p>
+
+		<label for="userEmail" > email: </label>
+		<input id="userEmail" type="email" name="email" required>
+
+		<label for="userPassword" > password: </label>	
+		<input id="userPassword" type="password" name="password" required minlength="4" maxlength="99">
+		</p>
+		<label> 
+			SIN NUMBER:<input name="username" type="text" placeholder="SIN #" pattern=".{16,16}" required title=" Must be 16 numbers" required >
+		</label>
+<!-- ALTERNATIVELY,LABELS CAN ALSO BE DONE LIEK THIS -->
+		<label for="creditcardinfo" > Credit Card Info: </label>
+		<input id="creditcardinfo" name="ccinfo" type="text" placeholder="CREDIT CARD # " pattern=".{16,16}"  required title=" Must be 16 numbers" required>
+<!-- ===============VALIDATIONS======================-->
+		<input type="submit" name="">
+		<p> DO YOu prefer support or adc </p>
+<!-- 		=============RADIO BUTTONS================ -->
+<!-- If we give it a name we can tell the website there can only be one -->
+<!-- By giving it a value, we can send this data to whereever action is -->
+		<label>
+			ADC: <input type="radio" name="botChoice" value="ADC">
+		</label>
+		<label>
+			Support: <input type="radio" name="botChoice" value="SUP">
+		</label>
+		<label> 
+			Not Available: <input type="radio" name="botChoice" value="N/A">
+		</label>
+<!-- ==================SELECT BUTTON (DROP DOG MENU)===================== -->
+		<p>What's your FAV ADC?
+		<!-- GIVE IT A NAME SO YOU CAN GET DATA -->
+		<select name="bestADC">  
+			<!-- We want to change value to send value -->
+			<option value = Twitch>Twitch </option> 
+			<option value = Twitch>Tristana </option>
+			<option value = Twitch>Jinx </option>
+			<option value = Twitch>Jhin </option> 
+			<option value = Twitch>Sivir </option>
+		</select>
+		</p>
+<!-- ==================STEXT AREA===================== -->
+		<p>Tell me all about why Twitch is your fav ADC</p>
+		<textarea rows = '10' cols='100' name ="desc">
+
+		</textarea>
+		<p>I have read the terms and condition, and I verified that all the above information is facutally acurate, and by agreeing to these terms you will be procescuted if the information is not valid 
+			<input type="radio" required >
+		</p>
+	</form>
+<!-- ================================END OF FORMS================================== -->
+
 </body>
 </html>
-
